@@ -13,30 +13,30 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.6.1</version>-->
 <!--                <configuration>-->
-<!--                    <parallel>tests</parallel>-->
-<!--                    <threadCount>2</threadCount>-->
-<!--                    <perCoreThreadCount>false</perCoreThreadCount>-->
-<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
 <!--                </configuration>-->
-            </plugin>
-        </plugins>
-    </build>
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M5</version>-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <parallel>tests</parallel>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <threadCount>2</threadCount>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <perCoreThreadCount>false</perCoreThreadCount>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <testFailureIgnore>true</testFailureIgnore>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 
 

@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonCartPage extends BasePage {
 
+    public AmazonCartPage(WebDriver driver) {
+        super(driver);
+    }
+
     @FindBy(xpath = "//span[@class='a-dropdown-prompt']")
     public WebElement quantityInCart;
 
@@ -25,9 +29,7 @@ public class AmazonCartPage extends BasePage {
     public WebElement quantity4;
 
 
-    public AmazonCartPage(WebDriver driver) {
-        super(driver);
-    }
+
 
     public String getFinalTotalCost(AmazonCartPage cartPage, WebElement quantityInCart2) {
         int quantityInCart = Integer.parseInt(quantityInCart2.getText());

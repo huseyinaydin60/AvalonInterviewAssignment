@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonSelectedItemPage extends BasePage {
 
+    public AmazonSelectedItemPage(WebDriver driver) {
+        super(driver);
+    }
+
     @FindBy(id = "a-autoid-0")
     public WebElement watchQuantityDropdown;
 
@@ -17,10 +21,6 @@ public class AmazonSelectedItemPage extends BasePage {
 
     @FindBy(xpath = "//input[@aria-labelledby='attachSiNoCoverage-announce']")
     public WebElement noThanksBtn;
-
-    public AmazonSelectedItemPage(WebDriver driver) {
-        super(driver);
-    }
 
     @FindBy(xpath = "//span[@id='a-autoid-0-announce']")
     public WebElement schoolBagQuantityDropDown;

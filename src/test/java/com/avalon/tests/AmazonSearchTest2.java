@@ -5,25 +5,24 @@ import com.avalon.pages.AmazonCartPage;
 import com.avalon.pages.AmazonMainPage;
 import com.avalon.pages.AmazonSelectedItemPage;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class AmazonSearchTest2 extends TestBase{
 
-  //  String url = "https://www.amazon.com";
+    String url = "https://www.amazon.com";
 
 
     @Test(priority = 1)
     public void amazonWatchSearchTest() throws InterruptedException {
 
         logger = extent.startTest("amazonWatchSearchTest");
-     //   Assert.assertTrue(true);
 
         logger.log(LogStatus.PASS, "Test Case Passed is passTest");
 
         //Step1: Go to the amazon.com and verify the main page title
-        driver.get("https://www.amazon.com");
+        driver.get(url);
         Assert.assertTrue(driver.getTitle().equals("Amazon.com. Spend less. Smile more."));
 
         //Step2: Search for watch
@@ -45,7 +44,7 @@ public class AmazonSearchTest2 extends TestBase{
 
 
         //Step5: Go to the cart and validate the cart quantity and total price
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         amazonMainPage.cartBtn.click();
         AmazonCartPage cartPage = new AmazonCartPage(driver);
         Assert.assertTrue(cartPage.quantityInCart.getText().equals("4"));
@@ -56,7 +55,7 @@ public class AmazonSearchTest2 extends TestBase{
         cartPage.quantityInCart.click();
         cartPage.quantity2.click();
         String finalCost = cartPage.getFinalTotalCost(cartPage, cartPage.quantity);
-        Thread.sleep(1000);
+        Thread.sleep(500);
         Assert.assertEquals(cartPage.totalPrice.getText().trim(),finalCost);
     }
 
@@ -64,12 +63,11 @@ public class AmazonSearchTest2 extends TestBase{
     public void amazonSchoolBagSearchTest() throws InterruptedException {
 
         logger = extent.startTest("amazonSchoolBagSearchTest");
-        //   Assert.assertTrue(true);
 
         logger.log(LogStatus.PASS, "Test Case Passed is passTest");
 
         //Step1: Go to the amazon.com and verify the main page title
-        driver.get("https://www.amazon.com");
+        driver.get(url);
         Assert.assertTrue(driver.getTitle().equals("Amazon.com. Spend less. Smile more."));
 
         //Step2: Search for School bag
@@ -90,8 +88,7 @@ public class AmazonSearchTest2 extends TestBase{
 
 
         //Step5: Go to the cart and validate the cart quantity and total price
-        Thread.sleep(2000);
-        amazonMainPage.cartBtn.click();
+        Thread.sleep(1000);
         selectedItemPage.schoolBagCartBtn.click(); //There is a "cart" button on the pop-op.
         AmazonCartPage cartPage = new AmazonCartPage(driver);
         Assert.assertTrue(cartPage.quantityInCart.getText().equals("6"));
